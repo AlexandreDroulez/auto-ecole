@@ -1,17 +1,9 @@
 export const palette = {
-  blue1: '#36A9E0',
-  blue2: '#2caae1',
-  green: '#5cb85c',
-  iceBlue: '#eef4f8',
-  almostBlack: '#101214',
-  brownGray: '#e0e6ea',
-  lightGray: '#989898',
-  lightGray2: '#3d5664',
-  lightGray3: '#657884',
+  darkBlue: '#2E3244',
+  lightGrey: '#C5C6C6',
   white: '#FFFFFF',
-  red: '#ba2424',
-  transparent: 'transparent',
-  orange: 'orange'
-}
+  orange: '#F1895C',
+  blue: '#516079',
+};
 
-export default { palette }
+export default { palette };
