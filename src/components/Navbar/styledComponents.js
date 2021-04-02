@@ -9,24 +9,27 @@ export const ContainerNavbar = styled.nav`
 export const ContainerLinksDesktop = styled.div`
   display: flex;
   align-items: center;
+
   ${deviceMedia.tablet`
     display: none;
   `};
 `;
 export const ContainerLinksTablet = styled.div`
   display: none;
-
   ${deviceMedia.tablet`
       display: flex;
-      height: calc(100vh - 86px);
       width: 100%;
-      height: ;
+      transition: 1s;
+      height: calc(100vh - 86px);
       position: absolute;
-      left: ${props => (props.show ? '0px' : '-1000px')};
+      left: ${props => (props.show === true ? '0px' : '-1000px')};
       transition: 1s;
       flex-direction: column;
       text-align: center;
       background: ${props => props.theme.palette.lightGrey};
+  `};
+  ${deviceMedia.phone`
+left: ${props => (props.show === true ? '0px' : '-600px')};
   `};
 `;
 
@@ -48,4 +51,10 @@ export const ContainerForWidth = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+`;
+export const ContainerButton = styled.div`
+  margin: 0 0 0 1rem;
+  ${deviceMedia.tablet`
+      margin: 1rem 0 0 0;
+  `};
 `;

@@ -3,23 +3,29 @@ import { deviceMedia } from '../../../styles/helper';
 
 export const ContainerImageAndText = styled.div`
   display: flex;
-  justify-content: center;
-  flex-direction: ${props => (props.reverse ? 'row' : 'row-reverse')};
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  flex-direction: ${props => (props.flexDirectonDesktopReverse ? 'row-reverse' : 'row')};
   ${deviceMedia.tablet`
-        flex-direction: ${props => (props.reverse ? 'column' : 'column-reverse;')};
+        flex-direction: ${props => (props.flexDirectonPhoneReverse ? 'column-reverse' : 'column;')};
+        margin: 2rem 1rem;
+       
   `};
 `;
-export const Image = styled.div`
+export const Image = styled.img`
   width: 50%;
-  background-color: aqua;
+  margin: 0 1rem;
+  border-radius: 20px;
   ${deviceMedia.tablet`
         width: 100%;
   `};
 `;
-export const Text = styled.div`
-  width: 50%;
-  background-color: olive;
+
+export const ContainerText = styled.div`
+  margin: 0 1rem;
+  width: 100%;
   ${deviceMedia.tablet`
-        width: 100%;
+        padding: 0;
   `};
 `;

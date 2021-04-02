@@ -4,8 +4,14 @@ import { sizes } from '../../../../../styles/helper';
 export const ContainerLandingHomeBody = styled.div`
   max-width: ${sizes.largeDesktop}px;
   margin: auto;
-  text-align: center;
 `;
-export const ContainerFirstSection = styled.div``;
-export const ContainerSecondSection = styled.div``;
-export const ContainerThirdSection = styled.div``;
+
+export const Title = styled.h2`
+  font-size: 4rem;
+  line-height: 1.3;
+  color: ${props => props.theme.palette.orange};
+`;
+export const Subtitle = styled.div`
+  font-size: 2rem;
+  color: ${props => props.theme.palette.orange};
+`;

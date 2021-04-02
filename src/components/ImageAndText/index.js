@@ -1,15 +1,14 @@
 import React from 'react';
-import { ContainerImageAndText, Image, Text } from './styledComponents';
+import { ContainerImageAndText, Image, ContainerText } from './styledComponents';
 
-const ImageAndText = ({ reverse }) => {
+const ImageAndText = ({ flexDirectonDesktopReverse, flexDirectonPhoneReverse, src, children }) => {
   return (
-    <ContainerImageAndText reverse={reverse}>
-      <Image>Il va faloir que je code cette image rapidement</Image>
-      <Text>
-        bla blablablab bla bla bla blab la bla blablablab bla bla bla blab la bla blablablab bla bla
-        bla blab la bla blablablab bla bla bla blab labla blablablab bla bla bla blab la bla
-        blablablab bla bla bla blab la bla blablablab bla bla bla blab la
-      </Text>
+    <ContainerImageAndText
+      flexDirectonPhoneReverse={flexDirectonPhoneReverse}
+      flexDirectonDesktopReverse={flexDirectonDesktopReverse}
+    >
+      <Image src={src} />
+      <ContainerText>{children}</ContainerText>
     </ContainerImageAndText>
   );
 };
