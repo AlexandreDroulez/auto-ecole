@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonCustom } from './styledComponents';
+import { ButtonCustom, ContainerButton } from './styledComponents';
 
 const Button = ({
   onClick,
@@ -13,22 +13,26 @@ const Button = ({
   height,
   borderRadius,
   fontWeight,
+  textAlign,
+  margin,
 }) => {
   return (
-    <ButtonCustom
-      fontWeight={fontWeight}
-      onClick={onClick}
-      type={type}
-      size={size}
-      height={height}
-      borderRadius={borderRadius}
-      color={color}
-      bgColor={bgColor}
-      borderColor={borderColor}
-      hoverOff={hoverOff}
-    >
-      {children}
-    </ButtonCustom>
+    <ContainerButton textAlign={textAlign} margin={margin}>
+      <ButtonCustom
+        fontWeight={fontWeight}
+        onClick={onClick}
+        type={type}
+        size={size}
+        height={height}
+        borderRadius={borderRadius}
+        color={color}
+        bgColor={bgColor}
+        borderColor={borderColor}
+        hoverOff={hoverOff}
+      >
+        {children}
+      </ButtonCustom>
+    </ContainerButton>
   );
 };
 

@@ -3,7 +3,6 @@ import {
   ContainerLinksDesktop,
   ContainerLinksTablet,
   ContainerNavbar,
-  ContainerButton,
   LinkForBurger,
   ContainerForWidth,
   Logo,
@@ -12,6 +11,7 @@ import LinksWithHover from '../LinksWithHover';
 import Burger from '../Burger';
 import { linksNavbar } from '../../../enums/links/navbar';
 import Button from '../Button';
+import { ContainerButton } from '../Button/styledComponents';
 
 const Navbar = () => {
   const [show, setShow] = useState('');
@@ -41,11 +41,9 @@ const Navbar = () => {
             {link.name}
           </LinkForBurger>
         ))}
-        <ContainerButton>
-          <Button fontWeight="600" size="tiny" height="xs">
-            Connexion
-          </Button>
-        </ContainerButton>
+        <Button margin="1rem 0" fontWeight="600" size="tiny" height="xs">
+          Connexion
+        </Button>
       </ContainerLinksTablet>
     </>
   );

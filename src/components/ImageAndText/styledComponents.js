@@ -5,11 +5,12 @@ export const ContainerImageAndText = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 4rem 0;
   flex-direction: ${props => (props.flexDirectonDesktopReverse ? 'row-reverse' : 'row')};
   ${deviceMedia.tablet`
         flex-direction: ${props => (props.flexDirectonPhoneReverse ? 'column-reverse' : 'column;')};
-        margin: 2rem 1rem;
+        margin: 4rem 1rem;
+        text-align:center;
        
   `};
 `;

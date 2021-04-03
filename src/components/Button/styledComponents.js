@@ -1,8 +1,17 @@
 import styled from 'styled-components';
 import { deviceMedia } from '../../../styles/helper';
 
+export const ContainerButton = styled.div`
+  margin: ${props => (props.margin ? props.margin : '0 0 0 1rem;')};
+  text-align: ${props => props.textAlign && props.textAlign};
+  ${deviceMedia.tablet`
+     margin: ${props => (props.margin ? props.margin : '0 0 0 1rem;')} margin: 1rem 0 0 0;    
+  `};
+`;
+
 export const ButtonCustom = styled.button`
   all: unset;
+  cursor: pointer;
   box-sizing: border-box;
   text-align: center;
   line-height: 1.5;

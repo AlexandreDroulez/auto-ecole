@@ -18,9 +18,10 @@ export const ContainerLinksTablet = styled.div`
   display: none;
   ${deviceMedia.tablet`
       display: flex;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
       width: 100%;
       transition: 1s;
-      height: calc(100vh - 86px);
       position: absolute;
       left: ${props => (props.show === true ? '0px' : '-1000px')};
       transition: 1s;
@@ -40,6 +41,11 @@ export const Logo = styled.div`
   font-size: 2rem;
   color: ${props => props.theme.palette.lightGrey};
   font-weight: bold;
+  transition: 1s;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+  }
 `;
 export const LinkForBurger = styled.a`
   color: ${props => props.theme.palette.darkBlue};
@@ -51,10 +57,4 @@ export const ContainerForWidth = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-`;
-export const ContainerButton = styled.div`
-  margin: 0 0 0 1rem;
-  ${deviceMedia.tablet`
-      margin: 1rem 0 0 0;
-  `};
 `;
