@@ -19,10 +19,20 @@ const AnimationLinkOff = keyframes`
 `;
 
 const complexMixinAnimationLinkOn = css`
+  border: 1px solid ${props => props.theme.palette.lightGrey};
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 100%;
   animation: ${AnimationLinkOn} 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
 
 const complexMixinAnimationLinkOff = css`
+  border: 1px solid ${props => props.theme.palette.lightGrey};
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 100%;
   animation: ${AnimationLinkOff} 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 `;
 
@@ -33,11 +43,6 @@ export const LinkNavBar = styled.a`
   color: ${props => props.theme.palette.lightGrey};
   transition: 0.4s;
   :before {
-    border: 1px solid ${props => props.theme.palette.lightGrey};
-    position: absolute;
-    bottom: 0;
-    content: '';
-    width: 100%;
     ${props => props.show === true && complexMixinAnimationLinkOn};
     ${props => props.show === false && complexMixinAnimationLinkOff};
   }

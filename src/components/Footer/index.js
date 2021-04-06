@@ -6,6 +6,7 @@ import {
   LinkFooter,
   LogoFooter,
   FlagFrench,
+  ContainerStarDndLink,
   ContainerAgrement,
 } from './styledComponents';
 import star from '../../../assets/svg/star.svg';
@@ -15,16 +16,18 @@ const Footer = () => {
   return (
     <ContainerFooter>
       <LogoFooter>Cepr</LogoFooter>
-      <ContainerStar>
-        <Star src={star} />
-        <Star src={star} />
-        <Star src={star} />
-        <Star src={star} />
-        <Star src={star} />
+      <ContainerStarDndLink>
+        <ContainerStar>
+          <Star src={star} />
+          <Star src={star} />
+          <Star src={star} />
+          <Star src={star} />
+          <Star src={star} />
+        </ContainerStar>
         <LinkFooter href="https://www.vroomvroom.fr/auto-ecoles/val-d-oise/franconville/cepr-95">
           5/5 sur www.vroomvroom.fr
         </LinkFooter>
-      </ContainerStar>
+      </ContainerStarDndLink>
       <ContainerAgrement>
         Numéro d&apos;agrément : 030038408370537
         <FlagFrench src={flagFrench} />
