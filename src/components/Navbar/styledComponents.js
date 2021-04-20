@@ -9,13 +9,13 @@ export const ContainerNavbar = styled.nav`
 export const ContainerLinksDesktop = styled.div`
   display: flex;
   align-items: center;
-
   ${deviceMedia.tablet`
     display: none;
   `};
 `;
 export const ContainerLinksTablet = styled.div`
   display: none;
+
   ${deviceMedia.tablet`
       display: flex;
       border-bottom-left-radius: 20px;
@@ -23,14 +23,15 @@ export const ContainerLinksTablet = styled.div`
       width: 100%;
       transition: 1s;
       position: absolute;
-      left: ${props => (props.show === true ? '0px' : '-1000px')};
+      left: ${props => (props.show === false ? '-1000px' : '0px')};
       transition: 1s;
       flex-direction: column;
       text-align: center;
       background: ${props => props.theme.palette.lightGrey};
+      z-index:2;
   `};
   ${deviceMedia.phone`
-left: ${props => (props.show === true ? '0px' : '-600px')};
+      left: ${props => (props.show === false ? '-600px' : '0px')};
   `};
 `;
 

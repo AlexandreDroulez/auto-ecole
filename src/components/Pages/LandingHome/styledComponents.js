@@ -1,3 +1,3 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const ContainerLandingHome = styled.div``
+export const ContainerLandingHome = styled.div``;

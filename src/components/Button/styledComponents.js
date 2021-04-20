@@ -3,6 +3,10 @@ import { deviceMedia } from '../../../styles/helper';
 
 export const ContainerButton = styled.div`
   margin: ${props => (props.margin ? props.margin : '0 0 0 1rem;')};
+  color: ${props => {
+    if (props.color) return props.color;
+    return props.theme.palette.white;
+  }};
   text-align: ${props => props.textAlign && props.textAlign};
   ${deviceMedia.tablet`
      margin: ${props => (props.margin ? props.margin : '0 0 0 1rem;')} margin: 1rem 0 0 0;    
@@ -59,9 +63,9 @@ export const ButtonCustom = styled.button`
     transform: scale(1.1);
     ${props => {
       if (!props.hoverOff) {
-        return `background-color: ${props.theme.palette.blue};
-                color: ${props.theme.palette.white};
-                border: 1px solid ${props.theme.palette.blue};
+        return `background-color: ${props.theme.palette.white};
+                color: ${props.theme.palette.orange};
+                border: 1px solid ${props.theme.palette.orange};
                 `;
       }
       return null;

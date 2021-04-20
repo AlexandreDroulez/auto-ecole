@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { deviceMedia } from '../../../styles/helper';
 
-export const ContainerFooter = styled.nav`
+export const ContainerFooter = styled.footer`
   padding: 1rem 2rem;
   background-color: ${props => props.theme.palette.darkBlue};
   color: ${props => props.theme.palette.lightGrey};
@@ -19,10 +19,7 @@ export const ContainerStarDndLink = styled.div`
       justify-content: center;  
   `}
 `;
-export const ContainerStar = styled.div`
-  display: flex;
-  justify-content: center;
-`;
+export const ContainerStar = styled.div``;
 
 export const Star = styled.img`
   width: 20px;

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { ContainerImageAndText, Image, ContainerText } from './styledComponents';
 
 const ImageAndText = ({ flexDirectonDesktopReverse, flexDirectonPhoneReverse, src, children }) => {

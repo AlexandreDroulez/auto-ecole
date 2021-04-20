@@ -28,3 +28,39 @@ export const Text = styled.div`
   margin: 1rem 0 0 0;
   color: ${props => props.theme.palette.lightGrey};
 `;
+
+export const ContainerForTime = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  ${deviceMedia.tablet`
+    display: block;
+  `}
+`;
+export const ContainerBodyCard = styled.div`
+  display: flex;
+  margin: 4rem auto;
+
+  justify-content: space-between;
+  ${deviceMedia.tablet`
+    display: block;
+  `}
+`;
+
+export const ContainerBodyOpinion = styled.div`
+  display: flex;
+  justify-content: space-between;
+  ${deviceMedia.tablet`
+    flex-direction: column;  
+  `}
+`;
+
+export const MainOpinionTitle = styled.h2`
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: ${props => props.theme.palette.orange};
+`;
+export const ContainerBodyOpinionWithTitle = styled.div`
+  margin: 4rem auto;
+`;
